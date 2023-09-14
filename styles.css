@@ -211,14 +211,14 @@
 }
 .play-logo {
   position: inherit;
-  overflow: visible;
+  overflow: hidden;
   margin-left: 85px;
   margin-top: -20px;
   margin-bottom: none;
   display: inline;
   opacity: 0;
   height: 40px;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 40px;
 }
 @keyframes changePlay {
