@@ -1,0 +1,437 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#navigation {
+  background-color: #111111;
+  padding: 1em;
+  flex-direction: row;
+  height: 5rem;
+  /* min-height: 68px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 25;
+}
+.web-name {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  font-family: fantasy;
+  margin: 0;
+}
+#web-icon {
+  color: white;
+  font-size: 2rem;
+}
+.button-back {
+  font-size: 1.2rem;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  margin: 0.1rem;
+}
+.button-back:hover {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.button2 {
+  background-color: transparent;
+  border: none;
+}
+.btn-txt2 {
+  color: #a7a7a7;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+.button2:hover .btn-txt2 {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+}
+.button {
+  font-size: 1rem;
+  border-radius: 2em;
+  padding: 1em 1.5em;
+  font-weight: 600;
+  color: black;
+  border-color: black;
+}
+.button:hover {
+  font-weight: 700;
+  background-color: lightgrey;
+}
+#back-front {
+  display: flex;
+  gap: 1em;
+}
+.llist {
+  list-style: none;
+  display: block;
+  padding: 0;
+  transition: all 1s ease-in-out;
+}
+.llist li i {
+  display: inline-block;
+  color: grey;
+  padding: 0.2em;
+  font-size: 1.5rem;
+}
+.llist li {
+  padding: 0.5em;
+}
+.llist li p a {
+  text-decoration: none;
+  color: white;
+}
+.llist li p {
+  display: inline-block;
+}
+#left-side-panel {
+  display: inline-block;
+  background-color: black;
+  position: fixed;
+  width: 17%;
+  height: 100%;
+  font-size: 1.1rem;
+  min-width: 165px;
+  padding: 2em;
+  z-index: 20;
+}
+#hamburger_logo {
+  display: none;
+}
+#hamburger_logo path {
+  fill: white;
+}
+
+#hamburger_logo svg {
+  width: 2rem;
+  height: 2rem;
+}
+#side-panel-navigator {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  width: 0vw;
+  background-color: rgb(15, 15, 15);
+  height: 100vh;
+  transition: all 1.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0em;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  font-size: 0;
+}
+
+.side-panel-navigator_link {
+  color: white;
+}
+
+#side-panel-navigator:target {
+  display: flex;
+  width: 30vw;
+  font-size: 1rem;
+  padding: 1em;
+}
+#side-panel-navigator:target .llist {
+  display: block;
+}
+#side-panel-navigator .llist {
+  display: none;
+}
+#menu-container {
+  background-image: linear-gradient(darkgrey -370%, black);
+  width: 83%;
+  /* height: 1000px; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: max(165px, 17%);
+}
+
+/*HEADING OF THE SECTION*/
+.heading-of-section {
+  padding-top: 2vw;
+  padding-left: 3vw;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+}
+.heading-of-section a {
+  text-decoration: none;
+  color: white;
+}
+@keyframes changeFontSize {
+  from {
+    font-size: 1.437rem;
+  }
+  to {
+    font-size: 1.562rem;
+  }
+}
+.heading-of-section a:hover {
+  animation-name: changeFontSize;
+  animation-delay: 0.1s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+/*HEADING OF THE SECTION END*/
+.boxes {
+  height: 17rem;
+  width: 10vw;
+  border: none;
+  min-width: 133px;
+  border-radius: 0.625rem;
+  background-color: rgba(22, 22, 22, 0.6);
+}
+.thumbnails {
+  width: 8.9vw;
+  height: 9.375rem;
+  /* margin-top: 10px; */
+  border-radius: 5px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 1em;
+  gap: 1em;
+  padding-left: 5.7em;
+}
+.title-of-block {
+  color: white;
+  margin-top: -1.625rem;
+  margin-left: 0.625rem;
+}
+.description-of-block {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #a7a7a7;
+  margin-left: 0.6875rem;
+  margin-right: 0.6875rem;
+}
+@keyframes changeColor {
+  from {
+    background-color: rgba(22, 22, 22, 0.6);
+  }
+  to {
+    background-color: rgb(37, 37, 37);
+  }
+}
+@keyframes changePlay {
+  from {
+    /* margin-top: -1.25rem; */
+    top: 1.5rem;
+    opacity: 0;
+  }
+  to {
+    /* margin-top: -5.3125rem; */
+    top: -2.25rem;
+    opacity: 1;
+  }
+}
+.boxes:hover {
+  animation-name: changeColor;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.play-logo {
+  position: relative;
+  overflow: hidden;
+  margin-left: 5.3125rem;
+  /* margin-top: -1.25rem; */
+  margin-bottom: none;
+  display: inline;
+  opacity: 0;
+  height: 2.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  /* margin-top: -1.25rem; */
+  top: 1.75rem;
+  opacity: 0;
+}
+.boxes:hover .play-logo {
+  animation-name: changePlay;
+  animation-delay: 0s;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+.boxes-singer {
+  height: 16.875rem;
+  width: 12vw;
+  border: none;
+  margin-top: 20px;
+  /* margin-left: 2.5rem; */
+  border-radius: 1.25rem;
+  background-color: rgba(22, 22, 22, 0.6);
+}
+.boxes-singer:hover {
+  animation-name: changeColor;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.boxes-singer:hover .play-logo {
+  animation-name: changePlay;
+  animation-delay: 0s;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+.thumbnails-singer {
+  width: 7rem;
+  height: 9.375rem;
+  margin-top: 0.625rem;
+  border-radius: 100%;
+}
+.see-all {
+  margin-top: 40px;
+}
+.see-all a {
+  color: #a7a7a7;
+  font-size: 1rem;
+  margin-right: 5.3rem;
+  margin-top: 3.75rem;
+}
+/*music-player*/
+#music-player {
+  background-color: rgba(22, 22, 22, 1);
+  height: 6.25rem;
+  width: 100%;
+  color: white;
+  overflow: visible;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 24;
+}
+.song-cover-photo {
+  width: 4.375rem;
+  height: 4.375rem;
+  margin-left: 20px;
+}
+.song-title {
+  font-size: 0.9375rem;
+  margin-left: 0.9375rem;
+  font-weight: 500;
+}
+.song-title p {
+  margin-bottom: 0;
+}
+.singer-name {
+  color: #a7a7a7;
+  font-size: 0.6875rem;
+}
+.music-player-icon {
+  padding-left: 1.06rem;
+  font-size: 1.4rem;
+}
+.music-player-icon:hover {
+  font-size: 1.46875rem;
+  padding-left: 1rem;
+}
+#seek-music-bar {
+  width: 25vw;
+  margin-top: 0.625rem;
+}
+/*music player ends*/
+@media screen and (max-width: 998px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 970px) {
+  html {
+    font-size: 70%;
+  }
+  #menu-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 955px) {
+  #menu-container {
+    width: 82%;
+  }
+  .thumbnails {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 902px) {
+  #menu-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 55%;
+  }
+  #menu-container {
+    width: 77%;
+  }
+}
+@media screen and (max-width: 686px) {
+  #menu-container {
+    width: 73%;
+  }
+  .boxes-singer {
+    width: 14vw;
+    min-width: 80px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #nav_options {
+    display: flex;
+  }
+  #navbar {
+    justify-content: flex-start;
+  }
+  #hamburger_logo {
+    display: inline-block;
+  }
+  #left-side-panel {
+    display: none;
+  }
+  #menu-container {
+    left: 0;
+    width: 100%;
+  }
+  .menu {
+    padding-left: 3.5em;
+  }
+  #menu-container {
+    width: 100%;
+  }
+  .llist {
+    display: none;
+  }
+  #basic-controls {
+    display: none;
+  }
+  #music-player {
+    justify-content: space-evenly;
+  }
+}
+/* .box-header-style{
+    display: flex;
+    justify-content: space-between;
+} */

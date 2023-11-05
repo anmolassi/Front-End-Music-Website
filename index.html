@@ -1,685 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font-awesome link -->
-    <script
-      src="https://kit.fontawesome.com/f7d8e8c4f0.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bootstrap link -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- my own stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.nicepng.com/png/detail/195-1959243_80s-music-icon-80s-music.png"
-    />
+    <script src="https://kit.fontawesome.com/f7d8e8c4f0.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.nicepng.com/png/detail/195-1959243_80s-music-icon-80s-music.png"/>
     <title>80 Music</title>
     <!--Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Uchen&display=swap"
-      rel="stylesheet"
-    />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet"/> -->
+    <!-- my own stylesheet -->
+    <link rel="stylesheet" href="new.css" />
   </head>
-
-  <body style="background-image: black">
-    <!--music palyer-->
-    <div id="music-player">
-      <div style="display: flex; flex-direction: row; align-items: center">
-        <img
-          src="https://1.bp.blogspot.com/-f9JC0Yi0Lzk/YO6m45shVmI/AAAAAAAABLk/Y8TAlwhYdic2yyiqgolx2BVmk43u9h6ZQCLcBGAsYHQ/w1200-h630-p-k-no-nu/IMG_20210714_142636.jpg"
-          class="song-cover-photo"
-        />
-        <div class="song-title">
-          <p>295</p>
-          <p class="singer-name">Sidhu Moose Wala</p>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column">
+  <body style="background-image: linear-gradient(darkgrey -370%, black);">
+    <div id="navigation">
         <div>
-          <i class="fa-solid fa-shuffle music-player-icon"></i>
-          <i class="fa-solid fa-backward-step music-player-icon"></i>
-          <i class="fa-solid fa-circle-play music-player-icon"></i>
-          <i class="fa-solid fa-forward-step music-player-icon"></i>
-          <i class="fa-solid fa-repeat music-player-icon"></i>
+            <i class="fa-solid fa-music" id="web-icon"></i>
+            <span><p class="web-name">80 Music</p></span>
         </div>
-        <input type="range" min="1" max="100" value="50" id="seek-music-bar" />
-      </div>
-      <div>
-        <i class="fa-solid fa-headphones music-player-icon"></i>
-        <i class="fa-solid fa-volume-low music-player-icon"></i>
-        <i class="fa-solid fa-volume-high music-player-icon"></i>
-        <i
-          class="fa-solid fa-volume-xmark music-player-icon"
-          style="margin-right: 40px"
-        ></i>
-        <div style="padding-top: 10px">
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="50"
-            style="width: 80%; margin-left: 10px"
-          />
-        </div>
-      </div>
-    </div>
-    <!--music-player-ends-->
-    <!--left-side-panels-starts-->
-    <header id="left-side-panel">
-      <!-- web-icon -->
-      <i class="fa-solid fa-music" id="web-icon"></i>
-      <span><p class="web-name">80 Music</p></span>
-      <ul class="llist">
-        <!-- home icon -->
-        <li>
-          <i class="fa-solid fa-house icon"></i>
-          <span
-            ><p class="icon-name" style="padding-left: 7px">
-              <a href="">Home</a>
-            </p></span
-          >
-        </li>
-        <!-- Search icon-->
-        <li>
-          <i class="fa-solid fa-magnifying-glass icon"></i
-          ><span
-            ><p class="icon-name"><a href="">Search</a></p></span
-          >
-        </li>
-        <!--Your Playlist-->
-        <li>
-          <i class="fa-solid fa-compact-disc icon"></i
-          ><span
-            ><p class="icon-name"><a href="">Your Playlist</a></p></span
-          >
-        </li>
-      </ul>
-      <ul class="llist" style="margin-top: 3.5rem">
-        <!--Create Playlist-->
-        <li>
-          <i class="fa-solid fa-circle-plus icon"></i>
-          <span
-            ><p class="icon-name"><a href="">Create Playlist</a></p></span
-          >
-        </li>
-        <!--Liked Songs-->
-        <li>
-          <i class="fa-brands fa-gratipay icon"></i>
-          <span
-            ><p class="icon-name">
-              <a href=""><a href="">Liked Songs</a></a>
-            </p></span
-          >
-        </li>
-        <li>
-          <span style="font-size:6px;color: white;">***Punjabi 101 works</span>
-        </li>
-      </ul>
-    </header>
-    <!--left-side-panel-ends-->
-    <div class="nav-container">
-      <!--Navigation-->
-      <aside id="navigation">
         <!--Navigation go backward and forward-->
         <aside id="back-front">
           <!--back arrow-->
-          <button type="button" class="button-back border border-0">
+          <button type="button" class="button-back">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
           <!--foward arrow-->
-          <button type="button" class="button-back border border-0">
+          <button type="button" class="button-back">
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </aside>
-        <aside>
-          <button type="button" class="button2 border border-0">
+        <aside style="display: flex;align-items: center;">
+          <button type="button" class="button2">
             <p class="btn-txt2">Sign up</p>
           </button>
-          <button type="button" class="button border border-0">
+          <button type="button" class="button">
             <p class="btn-txt">Log in</p>
           </button>
         </aside>
-      </aside>
-      <div>
-        <!--menu 1-->
-        <section class="box-header-style">
-          <h2 class="heading-of-section">
-            <a href="" style="display: inline-block">India's Best</a>
-          </h2>
-          <h2 class="see-all" style="display: inline-block">
-            <a href="">SEE ALL</a>
-          </h2>
-        </section>
-        <section class="menu">
-          <a
-            href="Sidhu_Moose_Wala.html"
-            target="_blank"
-            style="text-decoration: none"
-            ><div class="boxes" style="text-align: center; margin-left: 75px">
-              <img
-                src="https://djbaap.net/wp-content/media/covers/511.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Punjabi 101
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Remembering Sidhu Moose Wala.
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Vibe with Diljit
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Ranjit Bawa
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Arjit Singh
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Super Maan
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Bollywood Butter
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-        </section>
-        <!--menu 1 ends-->
-        <!--menu 2 starts-->
-        <section class="box-header-style">
-          <h2 class="heading-of-section">
-            <a href="" style="display: inline-block">India's Best</a>
-          </h2>
-          <h2 class="see-all" style="display: inline-block">
-            <a href="">SEE ALL</a>
-          </h2>
-        </section>
-        <section class="menu">
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center; margin-left: 75px">
-              <img
-                src="https://djbaap.net/wp-content/media/covers/511.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Punjabi 101
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Remembering Sidhu Moose Wala.
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Vibe with Diljit
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Ranjit Bawa
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Arjit Singh
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Super Maan
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Bollywood Butter
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-        </section>
-        <!--menu 2 ends-->
-        <!--menu 3 starts-->
-        <section class="box-header-style">
-          <h2 class="heading-of-section">
-            <a href="" style="display: inline-block">India's Best</a>
-          </h2>
-          <h2 class="see-all" style="display: inline-block">
-            <a href="">SEE ALL</a>
-          </h2>
-        </section>
-        <section class="menu">
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center; margin-left: 75px">
-              <img
-                src="https://djbaap.net/wp-content/media/covers/511.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Punjabi 101
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Remembering Sidhu Moose Wala.
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Vibe with Diljit
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Ranjit Bawa
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Arjit Singh
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Super Maan
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes" style="text-align: center">
-              <img
-                src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg"
-                class="thumbnails"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Bollywood Butter
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                The finest quality of Bollywood music handpicked for you...
-              </p>
-            </div></a
-          >
-        </section>
-        <!--menu 3 ends-->
-        <!--menu 4-->
-        <section class="box-header-style">
-          <h2 class="heading-of-section">
-            <a href="" style="display: inline-block">Suggested Artists</a>
-          </h2>
-          <h2 class="see-all" style="display: inline-block">
-            <a href="">SEE ALL</a>
-          </h2>
-        </section>
-        <section class="menu" style="margin-bottom: 140px">
-          <a href="Sidhu_Moose_Wala.html" style="text-decoration: none"
-            ><div
-              class="boxes-singer"
-              style="text-align: center; margin-left: 75px"
-            >
-              <img
-                src="https://djbaap.net/wp-content/media/covers/511.jpg"
-                class="thumbnails-singer"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Sidhu Moose Wala
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Artist
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes-singer" style="text-align: center">
-              <img
-                src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg"
-                class="thumbnails-singer"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Diljit-Dosanjh
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Artist
-              </p>
-            </div></a
-          >
-
-          <a href="" style="text-decoration: none"
-            ><div class="boxes-singer" style="text-align: center">
-              <img
-                src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg"
-                class="thumbnails-singer"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Ranjit Bawa
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Artist
-              </p>
-            </div></a
-          >
-          <a href="" style="text-decoration: none"
-            ><div class="boxes-singer" style="text-align: center">
-              <img
-                src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg"
-                class="thumbnails-singer"
-                alt="hello"
-              />
-              <img
-                src="./img/play-button.png"
-                class="play-logo"
-                loading="lazy"
-              />
-              <h6 style="text-align: left" class="title-of-block">
-                Arjit Singh
-              </h6>
-              <p style="text-align: left" class="description-of-block">
-                Artist
-              </p>
-            </div></a
-          >
-        </section>
-        <!--menu 4 ends-->
-      </div>
+        <a id="hamburger_logo" href="#side-panel-navigator">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="208px" height="208px"><path d="M 0 4 L 0 6 L 26 6 L 26 4 Z M 0 12 L 0 14 L 26 14 L 26 12 Z M 0 20 L 0 22 L 26 22 L 26 20 Z"/></svg>
+        </a>
     </div>
-  </body>
+    <div id="side-panel-navigator">
+        <div>
+            <ul class="llist">
+              <!-- home icon -->
+              <li>
+                <i class="fa-solid fa-house icon"></i>
+                <span><p class="icon-name"><a href="#">Close</a></p></span>
+              </li>
+              <!-- Search icon-->
+              <li>
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+                <span><p class="icon-name"><a href="#">Search</a></p></span>
+              </li>
+              <!--Your Playlist-->
+              <li>
+                <i class="fa-solid fa-compact-disc icon"></i>
+                <span><p class="icon-name"><a href="#">Your Playlist</a></p></span>
+              </li>
+            </ul>
+            <ul class="llist" style="margin-top: 3.5rem">
+              <!--Create Playlist-->
+              <li>
+                <i class="fa-solid fa-circle-plus icon"></i>
+                <span><p class="icon-name"><a href="#">Create Playlist</a></p></span>
+              </li>
+              <!--Liked Songs-->
+              <li>
+                <i class="fa-brands fa-gratipay icon"></i>
+                <span><p class="icon-name"><a href="#">Liked Songs</a></p></span>
+              </li>
+              <li>
+                <span style="font-size:6px;color: white;">***Punjabi 101 works</span>
+              </li>
+            </ul>
+        </div>
+    </div>
+      <div id="left-side-panel">
+        <ul class="llist">
+          <!-- home icon -->
+          <li>
+            <i class="fa-solid fa-house icon"></i>
+            <span><p class="icon-name"><a href="#">Home</a></p></span>
+          </li>
+          <!-- Search icon-->
+          <li>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <span><p class="icon-name"><a href="#">Search</a></p></span>
+          </li>
+          <!--Your Playlist-->
+          <li>
+            <i class="fa-solid fa-compact-disc icon"></i>
+            <span><p class="icon-name"><a href="#">Your Playlist</a></p></span>
+          </li>
+        </ul>
+        <ul class="llist" style="margin-top: 3.5rem">
+          <!--Create Playlist-->
+          <li>
+            <i class="fa-solid fa-circle-plus icon"></i>
+            <span><p class="icon-name"><a href="#">Create Playlist</a></p></span>
+          </li>
+          <!--Liked Songs-->
+          <li>
+            <i class="fa-brands fa-gratipay icon"></i>
+            <span><p class="icon-name"><a href="#">Liked Songs</a></p></span>
+          </li>
+          <li>
+            <span style="font-size:6px;color: white;">***Punjabi 101 works</span>
+          </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <!--menu 1-->
+        <div>
+            <section class="box-header-style">
+                <div style="display: flex;justify-content: space-between; align-items: center;">
+                    <h2 class="heading-of-section">
+                      <a href="#" style="display: inline-block">India's Best</a>
+                    </h2>
+                    <h2 class="see-all" style="display: inline-block">
+                      <a href="#">SEE ALL</a>
+                    </h2>
+                </div>
+            </section>
+            <section class="menu">
+                <a href="Sidhu_Moose_Wala_new.html" target="_blank" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center;">
+                    <img src="https://djbaap.net/wp-content/media/covers/511.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Punjabi 101</h6>
+                    <p style="text-align: left" class="description-of-block">Remembering Sidhu Moose Wala.</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Vibe with Diljit</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Ranjit Bawa</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Arjit Singh</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Super Maan</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Bollywood Butter</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+            </section>
+        </div>
+          <!-- menu 1 ends -->
+          <!--menu 1-->
+        <div>
+            <section class="box-header-style">
+                <div style="display: flex;justify-content: space-between; align-items: center;">
+                    <h2 class="heading-of-section">
+                      <a href="#" style="display: inline-block">India's Best</a>
+                    </h2>
+                    <h2 class="see-all" style="display: inline-block">
+                      <a href="#">SEE ALL</a>
+                    </h2>
+                </div>
+            </section>
+            <section class="menu">
+                <a href="Sidhu_Moose_Wala.html" target="_blank" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center;">
+                    <img src="https://djbaap.net/wp-content/media/covers/511.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Punjabi 101</h6>
+                    <p style="text-align: left" class="description-of-block">Remembering Sidhu Moose Wala.</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Vibe with Diljit</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Ranjit Bawa</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Arjit Singh</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Super Maan</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Bollywood Butter</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+            </section>
+        </div>
+          <!-- menu 1 ends -->
+          <!--menu 1-->
+        <div>
+            <section class="box-header-style">
+                <div style="display: flex;justify-content: space-between; align-items: center;">
+                    <h2 class="heading-of-section">
+                      <a href="#" style="display: inline-block">India's Best</a>
+                    </h2>
+                    <h2 class="see-all" style="display: inline-block">
+                      <a href="#">SEE ALL</a>
+                    </h2>
+                </div>
+            </section>
+            <section class="menu">
+                <a href="Sidhu_Moose_Wala.html" target="_blank" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center;">
+                    <img src="https://djbaap.net/wp-content/media/covers/511.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Punjabi 101</h6>
+                    <p style="text-align: left" class="description-of-block">Remembering Sidhu Moose Wala.</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Vibe with Diljit</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Ranjit Bawa</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Arjit Singh</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Super Maan</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Bollywood Butter</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+            </section>
+        </div>
+          <!-- menu 1 ends -->
+          <!--menu 1-->
+        <div>
+            <section class="box-header-style">
+                <div style="display: flex;justify-content: space-between; align-items: center;">
+                    <h2 class="heading-of-section">
+                      <a href="#" style="display: inline-block">India's Best</a>
+                    </h2>
+                    <h2 class="see-all" style="display: inline-block">
+                      <a href="#">SEE ALL</a>
+                    </h2>
+                </div>
+            </section>
+            <section class="menu">
+                <a href="Sidhu_Moose_Wala.html" target="_blank" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center;">
+                    <img src="https://djbaap.net/wp-content/media/covers/511.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Punjabi 101</h6>
+                    <p style="text-align: left" class="description-of-block">Remembering Sidhu Moose Wala.</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Vibe with Diljit</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Ranjit Bawa</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Arjit Singh</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://i.pinimg.com/736x/32/13/31/321331c37d8897bc1b003fbc54b885d0.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Super Maan</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                    <div class="boxes" style="text-align: center">
+                    <img src="https://img.etimg.com/photo/msid-76786254,quality-100/bollywood-films-heading-to-ott-has-sparked-fury-from-cinema-operators-.jpg" class="thumbnails" alt="hello"/>
+                    <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                    <h6 style="text-align: left" class="title-of-block">Bollywood Butter</h6>
+                    <p style="text-align: left" class="description-of-block">The finest quality of Bollywood music handpicked for you...</p>
+                  </div>
+                </a>
+            </section>
+        </div>
+          <!-- menu 1 ends -->
+          <!--menu 4-->
+        <section class="box-header-style">
+            <div style="display: flex;justify-content: space-between; align-items: center;">
+                <h2 class="heading-of-section">
+                  <a href="#" style="display: inline-block">Suggested Artists</a>
+                </h2>
+                <h2 class="see-all" style="display: inline-block">
+                  <a href="#">SEE ALL</a>
+                </h2>
+            </div>
+        </section>
+        <section class="menu" style="margin-bottom: 4rem">
+            <a href="Sidhu_Moose_Wala.html" style="text-decoration: none">
+                <div class="boxes-singer" style="text-align: center;">
+                <img src="https://djbaap.net/wp-content/media/covers/511.jpg" class="thumbnails-singer" alt="hello"/>
+                <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                <h6 style="text-align: left" class="title-of-block">Sidhu Moose Wala</h6>
+                <p style="text-align: left" class="description-of-block">Artist</p>
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none">
+                <div class="boxes-singer" style="text-align: center">
+                <img src="https://www.easterneye.biz/wp-content/uploads/2020/08/Diljit-Dosanjh-.jpg" class="thumbnails-singer" alt="hello"/>
+                <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                <h6 style="text-align: left" class="title-of-block">Diljit-Dosanjh</h6>
+                <p style="text-align: left" class="description-of-block">Artist</p>
+              </div>
+            </a>
+            <a href="#" style="text-decoration: none">
+            <div class="boxes-singer" style="text-align: center">
+                <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/06/15/1fc257ede210538f61d054b0eaa6c4ab1686806716405709_8.jpg" class="thumbnails-singer" alt="hello"/>
+                <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                <h6 style="text-align: left" class="title-of-block">Ranjit Bawa</h6>
+                <p style="text-align: left" class="description-of-block">Artist</p>
+            </div>
+            </a>
+            <a href="#" style="text-decoration: none">
+                <div class="boxes-singer" style="text-align: center">
+                <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" class="thumbnails-singer" alt="hello"/>
+                <img src="./img/play-button.png" class="play-logo" loading="lazy"/>
+                <h6 style="text-align: left" class="title-of-block">Arjit Singh</h6>
+                <p style="text-align: left" class="description-of-block">Artist</p>
+              </div>
+            </a>
+          </section>
+          <!--menu 4 ends-->
+    </div>
+    <!--music palyer-->
+    <div id="music-player">
+        <div style="display: flex; flex-direction: row; align-items: center">
+          <img
+            src="https://1.bp.blogspot.com/-f9JC0Yi0Lzk/YO6m45shVmI/AAAAAAAABLk/Y8TAlwhYdic2yyiqgolx2BVmk43u9h6ZQCLcBGAsYHQ/w1200-h630-p-k-no-nu/IMG_20210714_142636.jpg"
+            class="song-cover-photo"
+          />
+          <div class="song-title">
+            <p>295</p>
+            <p class="singer-name">Sidhu Moose Wala</p>
+          </div>
+        </div>
+  
+        <div style="display: flex; flex-direction: column;align-items: center;">
+          <div>
+            <i class="fa-solid fa-shuffle music-player-icon"></i>
+            <i class="fa-solid fa-backward-step music-player-icon"></i>
+            <i class="fa-solid fa-circle-play music-player-icon"></i>
+            <i class="fa-solid fa-forward-step music-player-icon"></i>
+            <i class="fa-solid fa-repeat music-player-icon"></i>
+          </div>
+          <input type="range" min="1" max="100" value="50" id="seek-music-bar" />
+        </div>
+        <div id="basic-controls">
+          <i class="fa-solid fa-headphones music-player-icon"></i>
+          <i class="fa-solid fa-volume-low music-player-icon"></i>
+          <i class="fa-solid fa-volume-high music-player-icon"></i>
+          <i
+            class="fa-solid fa-volume-xmark music-player-icon"
+            style="margin-right: 40px"
+          ></i>
+          <div style="padding-top: 10px">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              style="width: 80%; margin-left: 10px"
+            />
+          </div>
+        </div>
+      </div>
+      <!--music-player-ends-->
+</body>
   <!--add-ons-->
-  <script src="script.js"></script>
-  <script
+  <!-- <script src="script.js"></script> -->
+  <!-- <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"
-  ></script>
-  <script
+  ></script> -->
+  <!-- <script
     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-  ></script>
+  ></script> -->
 </html>

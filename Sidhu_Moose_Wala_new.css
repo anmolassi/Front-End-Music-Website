@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#navigation {
+  background-color: #111111;
+  padding: 1em;
+  flex-direction: row;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 25;
+}
+.web-name {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  font-family: fantasy;
+  margin: 0;
+}
+#web-icon {
+  color: white;
+  font-size: 2rem;
+}
+.button-back {
+  font-size: 1.2rem;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  margin: 0.1rem;
+}
+.button-back:hover {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.button2 {
+  background-color: transparent;
+  border: none;
+}
+.btn-txt2 {
+  color: #a7a7a7;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+.button2:hover .btn-txt2 {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+}
+.button {
+  font-size: 1rem;
+  border-radius: 2em;
+  padding: 1em 1.5em;
+  font-weight: 600;
+  color: black;
+  border-color: black;
+}
+.button:hover {
+  font-weight: 700;
+  background-color: lightgrey;
+}
+#back-front {
+  display: flex;
+  gap: 1em;
+}
+.play-all-button {
+  border: none;
+  width: 6.25rem;
+  height: 2.5rem;
+  color: white;
+  background-image: linear-gradient(black -30%, rgb(33, 33, 33));
+  font-size: 0.875rem;
+}
+.play-all-button:hover {
+  animation-name: changeButtonSize;
+  animation-delay: 0.1s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+@keyframes changeButtonSize {
+  from {
+    font-size: 0.875rem;
+  }
+  to {
+    font-size: 0.9375rem;
+  }
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+#main-content-body {
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1.5em;
+  background-image: linear-gradient(darkgrey -370%, black);
+  color: white;
+}
+#left-side-singer-column {
+  padding: 1em;
+  width: clamp(300px, 60%, 700px);
+  align-self: flex-start;
+}
+#singer-intro-box {
+  padding: 1em;
+  background-color: black;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+#singer-name-follower-count {
+  width: 60%;
+  padding: 0.7em;
+}
+.singer-song-box {
+  background-color: rgba(20, 20, 20, 0.8);
+  width: 100%;
+  padding: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  transition: all 0.2s ease-in-out;
+}
+.singer-song-box {
+  margin-top: 0.5rem;
+}
+.singer-song-box:hover {
+  margin-top: 0.3rem;
+  margin-bottom: 0.2rem;
+  background-color: rgba(37, 37, 37, 0.8);
+}
+/* :nth-child(1 of .singer-song-box):hover{
+    margin-bottom: 0.7em;
+    background-color: aqua;
+    font-size: 40px;
+} */
+/* .singer-song-box ~ .singer-song-box:hover{
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    background-color: rgba(183, 29, 29, 0.8);
+} */
+.similar-singer-box {
+  background-color: rgba(20, 20, 20, 0.8);
+  width: 95%;
+  padding: 1em;
+  margin-top: 0.6em;
+  transition: all 0.2s ease-in-out;
+}
+:nth-last-child(1 of .similar-singer-box){
+    margin-bottom: 1em;
+}
+.similar-singer-image {
+  width: 22%;
+  height: 100%;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+}
+#right-side-singer-column {
+  width: clamp(295px, 40%, 662px);
+  padding: 1em 2em;
+  align-items: center;
+}
+.similar-singer-box:hover {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  background-color: rgba(37, 37, 37, 0.8);
+}
+/*music-player*/
+#music-player {
+    background-color: rgba(22, 22, 22, 1);
+    height: 6.25rem;
+    width: 100%;
+    color: white;
+    overflow: visible;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 24;
+  }
+  .song-cover-photo {
+    width: 4.375rem;
+    height: 4.375rem;
+    margin-left: 20px;
+  }
+  .song-title {
+    font-size: 0.9375rem;
+    margin-left: 0.9375rem;
+    font-weight: 500;
+  }
+  .song-title p {
+    margin-bottom: 0;
+  }
+  .singer-name {
+    color: #a7a7a7;
+    font-size: 0.6875rem;
+  }
+  .music-player-icon {
+    padding-left: 1.06rem;
+    font-size: 1.4rem;
+  }
+  .music-player-icon:hover 
+  {
+      font-size: 1.46875rem;
+      padding-left: 1rem;
+  }
+  #seek-music-bar
+  {
+      width: 25vw; 
+      margin-top: 0.625rem;
+  }
+  /*music player ends*/
+@media screen and (max-width: 998px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+  #right-side-singer-column {
+    flex-grow: 1;
+  }
+  #left-side-singer-column {
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 629px) {
+  
+  #basic-controls {
+    display: none;
+  }
+  #music-player {
+    justify-content: space-evenly;
+  }
+}
