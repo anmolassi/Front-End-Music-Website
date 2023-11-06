@@ -116,7 +116,6 @@ body {
 #hamburger_logo path {
   fill: white;
 }
-
 #hamburger_logo svg {
   width: 2rem;
   height: 2rem;
@@ -129,7 +128,7 @@ body {
   width: 0vw;
   background-color: rgb(15, 15, 15);
   height: 100vh;
-  transition: all 1.2s ease-in-out;
+  transition: all 0.8s ease-in-out;
   display: flex;
   flex-direction: column;
   padding: 0em;
@@ -137,14 +136,12 @@ body {
   align-items: flex-end;
   font-size: 0;
 }
-
 .side-panel-navigator_link {
   color: white;
 }
-
 #side-panel-navigator:target {
   display: flex;
-  width: 50vw;
+  width: 56vw;
   font-size: 4vw;
   padding: 1em;
 }
@@ -155,8 +152,25 @@ body {
   align-items: flex-start;
   gap:1em;
 }
+#side-panel-navigator:target .llist i{
+  font-size: 2.5rem;
+}
+#hamburger_close_logo {
+  display: none;
+}
+#side-panel-navigator:target + #navigation #hamburger_close_logo{
+  display: block;
+}
+#side-panel-navigator:target + #navigation #hamburger_logo{
+  display: none;
+}
+/* #hamburger_logo:target #hamburger_logo{
+  display: none;
+} */
 #side-panel-navigator .llist {
   display: none;
+  gap:0;
+  transition: all 0.8s ease-in-out;
 }
 #menu-container {
   background-image: linear-gradient(darkgrey -370%, black);

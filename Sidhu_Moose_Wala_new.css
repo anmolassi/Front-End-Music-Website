@@ -42,11 +42,11 @@ body {
   font-size: 2rem;
 }
 .button-back {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border: 0;
   background-color: transparent;
   color: white;
-  margin: 0.1rem;
+  padding: 0.8rem;
 }
 .button-back:hover {
   font-size: 1.4rem;
