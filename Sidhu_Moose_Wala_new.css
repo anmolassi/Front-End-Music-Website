@@ -173,9 +173,6 @@ body {
   margin-top: 0.6em;
   transition: all 0.2s ease-in-out;
 }
-:nth-last-child(1 of .similar-singer-box){
-    margin-bottom: 1em;
-}
 .similar-singer-image {
   width: 22%;
   height: 100%;
@@ -192,6 +189,14 @@ body {
   margin-top: 0.4em;
   margin-bottom: 0.2em;
   background-color: rgba(37, 37, 37, 0.8);
+}
+:nth-last-child(1 of .similar-singer-box){
+  margin-bottom: 1em;
+}
+:nth-last-child(1 of .similar-singer-box):hover{
+  margin-top: 0.4em;
+  background-color: rgba(37, 37, 37, 0.8);
+  margin-bottom: 1.2em;
 }
 /*music-player*/
 #music-player {
