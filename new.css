@@ -144,12 +144,16 @@ body {
 
 #side-panel-navigator:target {
   display: flex;
-  width: 30vw;
-  font-size: 1rem;
+  width: 50vw;
+  font-size: 4vw;
   padding: 1em;
 }
 #side-panel-navigator:target .llist {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap:1em;
 }
 #side-panel-navigator .llist {
   display: none;
